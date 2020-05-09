@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
   if user
     p Hello, #{user.username}
     a(href="/logout") Logout
@@ -12,3 +10,7 @@ block content
   button#scaling-button 拡大⬛縮小▪
   button#moving-button 移動💨
   div#root
+  h1 サーバーステータス
+  h3 ロードアベレージ
+  p#loadavg
+  script(src="/javascripts/bundle.js")
